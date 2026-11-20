@@ -1,0 +1,128 @@
+.filters {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(31, 45, 72, 0.05);
+}
+
+.filters__top {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(320px, 1.5fr);
+  gap: 28px;
+}
+
+.filters__label {
+  display: block;
+  margin-bottom: 12px;
+  color: #596579;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.category-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #344054;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.category-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+}
+
+.filters__hint {
+  margin-top: 13px;
+  color: #8993a4;
+  font-size: 12px;
+}
+
+.price-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.price-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #d6dce6;
+  border-radius: 8px;
+  outline: none;
+  color: #263247;
+  background: #ffffff;
+  font: inherit;
+}
+
+.price-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.price-input--error {
+  border-color: #ef4444;
+}
+
+.price-range {
+  display: block;
+  width: 100%;
+  margin: 14px 0 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.filter-error {
+  display: block;
+  margin-top: 7px;
+  color: #dc2626;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.filter-button {
+  display: block;
+  min-width: 190px;
+  margin: 22px auto 0;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #2563eb;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filter-button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 760px) {
+  .filters__top {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    padding: 18px;
+  }
+
+  .category-list,
+  .price-filters {
+    grid-template-columns: 1fr;
+  }
+}
